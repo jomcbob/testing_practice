@@ -5,7 +5,7 @@
 ---
 
 ## How to use 
-past the following in your console
+paste the following in your console
 ```js
   npm install --save-dev jest
 ```
