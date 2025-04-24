@@ -35,11 +35,3 @@ Finally, run npm test and Jest will print this message:
 PASS  ./sum.test.js
 ✓ adds 1 + 2 to equal 3 (5ms)
 ```
-
-<div style="background-color: black; color: white; padding:10px; border-radius:5px; font-family:monospace;">
-  <pre><code>
-function greet() {
-  console.log("Hello, world!");
-}
-  </code></pre>
-</div>
