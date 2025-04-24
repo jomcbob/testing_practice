@@ -36,7 +36,7 @@ PASS  ./sum.test.js
 ✓ adds 1 + 2 to equal 3 (5ms)
 ```
 
-<div style="background-color:#272822; color:#f8f8f2; padding:10px; border-radius:5px; font-family:monospace;">
+<div style="background-color: black; color: white; padding:10px; border-radius:5px; font-family:monospace;">
   <pre><code>
 function greet() {
   console.log("Hello, world!");
