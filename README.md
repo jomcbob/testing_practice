@@ -1,37 +1,12 @@
-# Testing Basics (with jest)
+# React + Vite
 
-## This was my first hands on repo on how to do TDD in real life
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## How to use 
-paste the following in your console
-```js
-  npm install --save-dev jest
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Then, create a file named sum.test.js. This will contain the test:
+## Expanding the ESLint configuration
 
-```js
-const sum = require('./sum');
-
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
-```
-
-Add the following section to your package.json:
-```js
-{
-  "scripts": {
-    "test": "jest"
-  }
-}
-```
-
-Finally, run npm test and Jest will print this message:
-
-```js
-PASS  ./sum.test.js
-✓ adds 1 + 2 to equal 3 (5ms)
-```
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
