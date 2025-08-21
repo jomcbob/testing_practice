@@ -1,0 +1,53 @@
+.card {
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: large;
+    background: white;
+    box-shadow:
+      0 4px 8px rgba(0,0,0,0.2),     
+      0 10px 20px rgba(0,0,0,0.1);   
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+    color: black;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);  
+  box-shadow:
+    0 10px 15px rgba(0,0,0,0.3),
+    0 20px 30px rgba(0,0,0,0.15);
+}
+
+.container {
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  overflow-y: auto;
+  background-color: ghostwhite;
+}
+
+.cardBox {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  flex: 1;
+  gap: 20px;
+  transition: all 0.3s ease;
+  padding-bottom: 70px;
+}
+
+.flexRow {
+  display: flex;
+  height: 100%;
+}
