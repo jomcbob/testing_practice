@@ -28,9 +28,9 @@ const Shop = () => {
 
   return (
     <>
-      <Header link={'/'} page={'🏠 Home'} />
+      <Header link={'/'} page={'Home'} img='/home.svg' />
       <div className="flexRow">
-        <SideBar data={data} setFilter={setFilter} setSearch={setSearch} search={search} />
+        <SideBar data={data} filter={filter} setFilter={setFilter} setSearch={setSearch} search={search} />
         <CardBox cart={cart} setCart={setCart} data={data} filter={filter} setSearch={setSearch} search={search} />
       </div>
       <Cart showModal={showModal} setShowModal={setShowModal} data={cart} setCart={setCart} />

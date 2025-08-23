@@ -3,6 +3,7 @@ import "./index.css"
 import { useState, useEffect, createContext } from 'react'
 import { getRandomPricedBooks } from "./components/fetch";
 import { Link } from "react-router-dom";
+import '@smastrom/react-rating/style.css'
 
 
 const DataContext = createContext();
@@ -39,14 +40,16 @@ const App = () => {
 
   return (
     <>
-      <Header link={'shop'} page={'🏪 Shop'} />
+      <Header link={'shop'} page={'Shop'} img='/shop.svg' />
       <div className="mainPage">
         <div className="skew"></div>
         <div className="mainContainer">
-          <div>wecolme to</div>
-          <div>logo</div>
-          <Link to='shop'>
-            <button>Shop now!</button>
+          <div>Welcome to</div>
+          <div>
+            <img src="/logo.png" height={'300px'} alt="" />
+          </div>
+          <Link tabIndex={-1} to='shop'>
+            <button className="pulsing-button">Shop now!</button>
           </Link>
         </div>
       </div>

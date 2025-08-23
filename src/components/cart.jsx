@@ -1,7 +1,9 @@
 import '../cssModals/cart.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import OrderEmailSender from '../components/email';
 
 export default function Modal({ showModal, setShowModal, data, setCart }) {
+  const [payment, setPayment] = useState(false)
 
   useEffect(() => {
     if (showModal) {
@@ -12,6 +14,10 @@ export default function Modal({ showModal, setShowModal, data, setCart }) {
       document.body.style.overflow = ''
     }
   }, [showModal])
+
+  useEffect(() => {
+      setPayment(false)
+  }, [data])
 
   return (
     <div>
@@ -44,6 +50,16 @@ export default function Modal({ showModal, setShowModal, data, setCart }) {
               <div>Nothing in cart!</div>
             )}
           </div>
+          {(data.length !== 0 && payment === false) && (
+            <>
+              <button onClick={() => {
+                setPayment(true)
+              }}>open payment options</button>
+            </>
+            )}
+            {(payment === true && data.length !== 0) && 
+              <OrderEmailSender cart={data} />
+            }
         </div>
       </div>
     </div>
